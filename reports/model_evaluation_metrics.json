@@ -1,0 +1,48 @@
+{
+  "problem_statement": "SIH26054",
+  "organization": "DRDO - Department of Defence R&D",
+  "timestamp_utc": "2026-09-29 12:43:21Z",
+  "model_architecture": {
+    "name": "PhysicsResidualAutoencoder",
+    "layers": [
+      13,
+      32,
+      16,
+      4,
+      16,
+      32,
+      13
+    ],
+    "activation": "LeakyReLU(0.1)",
+    "latent_bottleneck_dim": 4,
+    "trainable_parameters": 2097
+  },
+  "dataset_statistics": {
+    "total_samples": 6200,
+    "nominal_training": 4000,
+    "nominal_validation": 1000,
+    "anomalous_test": 1200,
+    "flight_profiles": [
+      "High-Altitude ISR (25k ft)",
+      "Desert Ambient (+46C)",
+      "Rapid Power Slams",
+      "Steady Cruise"
+    ]
+  },
+  "performance_metrics": {
+    "roc_auc": 1.0,
+    "precision_pct": 99.17,
+    "recall_pct": 100.0,
+    "f1_score_pct": 99.59,
+    "calibrated_threshold": 0.20961,
+    "mean_nominal_loss": 0.04616,
+    "mean_anomaly_loss": 3.65286,
+    "confusion_matrix": {
+      "true_negative": 990,
+      "false_positive": 10,
+      "false_negative": 0,
+      "true_positive": 1200
+    },
+    "avg_inference_latency_ms": 10.561
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "report_id": "DRDO-EHR-1790487096",
+  "generated_at": "2026-09-27 05:31:36 UTC",
+  "organization": "DRDO Department of Defence R&D - Theme: Robotics & Drones",
+  "problem_statement_id": "SIH26054",
+  "mission_name": "E2E_VALIDATION_MISSION",
+  "mission_duration_minutes": 0.0,
+  "mission_phases_covered": [
+    "Pre-flight & Ground Warmup"
+  ],
+  "initial_engine_health_index": 100.0,
+  "minimum_engine_health_index": 90.6,
+  "final_engine_health_index": 90.6,
+  "health_degradation_pct": 9.44,
+  "mission_reliability_score": 57.9,
+  "final_subsystem_health": {
+    "thermal_cht": 100.0,
+    "exhaust_gas_path": 100.0,
+    "fuel_injection": 100.0,
+    "lubrication_system": 45.2,
+    "turbo_charge": 100.0,
+    "cooling_system": 100.0,
+    "combustion_stability": 100.0,
+    "electrical_bus": 100.0
+  },
+  "max_cht_c": 89.2,
+  "max_egt_c": 750.7,
+  "max_cht_spread_c": 3.9,
+  "max_egt_spread_c": 30.9,
+  "min_oil_pressure_bar": 0.47,
+  "max_oil_temp_c": 85.2,
+  "max_vibration_rms_g": 0.87,
+  "detected_fault_count": 1,
+  "detected_faults": [
+    {
+      "alert_id": "ALT-LUBE-1",
+      "timestamp_s": 1790487095.9040656,
+      "fault_code": "ATA79-LUBE-01",
+      "subsystem": "lubrication_system",
+      "severity": "CRITICAL",
+      "title": "Lubrication Oil Pressure Degradation",
+      "description": "Oil pressure deficit: 0.8 bar (Digital Twin expected: 1.98 bar). Oil temp: 84.4\u00b0C.",
+      "affected_cylinder": null,
+      "root_cause_evidence": {
+        "oil_pressure_bar": 0.8,
+        "residual_oil_p_bar": -1.18,
+        "oil_temp_c": 84.4
+      },
+      "recommended_action": "AOG Alert: Immediate engine power reduction if airborne. Inspect oil filter for metal particulate, check pressure relief valve and oil lines.",
+      "is_active": true
+    }
+  ],
+  "prognostics": {
+    "accumulated_flight_hours": 340.0,
+    "remaining_useful_life_p50_hours": 1153.7,
+    "rul_confidence_interval_90pct": [
+      991.0,
+      1316.5
+    ],
+    "limiting_component": "Crankshaft Journal Lubrication",
+    "degradation_trend": "ACCELERATING_WEAR"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "report_id": "DRDO-EHR-1790680171",
+  "generated_at": "2026-09-29 11:09:31 UTC",
+  "organization": "DRDO Department of Defence R&D - Theme: Robotics & Drones",
+  "problem_statement_id": "SIH26054",
+  "mission_name": "HOT_DESERT_PATROL_SAMPLE",
+  "mission_duration_minutes": 0.0,
+  "mission_phases_covered": [
+    "Desert Taxi & High Ambient Idle",
+    "Maximum Power Desert Takeoff"
+  ],
+  "initial_engine_health_index": 99.6,
+  "minimum_engine_health_index": 98.2,
+  "final_engine_health_index": 98.2,
+  "health_degradation_pct": 1.34,
+  "mission_reliability_score": 90.5,
+  "final_subsystem_health": {
+    "thermal_cht": 86.4,
+    "exhaust_gas_path": 100.0,
+    "fuel_injection": 100.0,
+    "lubrication_system": 100.0,
+    "turbo_charge": 100.0,
+    "cooling_system": 100.0,
+    "combustion_stability": 99.3,
+    "electrical_bus": 100.0
+  },
+  "max_cht_c": 122.8,
+  "max_egt_c": 794.3,
+  "max_cht_spread_c": 4.2,
+  "max_egt_spread_c": 39.1,
+  "min_oil_pressure_bar": 1.93,
+  "max_oil_temp_c": 95.0,
+  "max_vibration_rms_g": 1.86,
+  "detected_fault_count": 1,
+  "detected_faults": [
+    {
+      "alert_id": "ALT-OHT-1",
+      "timestamp_s": 1790590347.5186675,
+      "fault_code": "ATA75-OHT-02",
+      "subsystem": "thermal_cht",
+      "severity": "CAUTION",
+      "title": "Predictive Overheating Trajectory",
+      "description": "Predictive thermal trend: CHT rising at +882.0\u00b0C/min. Projected to reach 2751.5\u00b0C in 180s under current power.",
+      "affected_cylinder": null,
+      "root_cause_evidence": {
+        "thermal_slope_c_per_min": 882.0,
+        "projected_cht_180s": 2751.5,
+        "current_cht_c": 105.5
+      },
+      "recommended_action": "Lower climb rate or increase airspeed by 10 kts to boost ram air mass flow; enrich mixture to cool combustion chambers.",
+      "is_active": true
+    }
+  ],
+  "prognostics": {
+    "accumulated_flight_hours": 340.0,
+    "remaining_useful_life_p50_hours": 1749.5,
+    "rul_confidence_interval_90pct": [
+      1482.5,
+      2016.5
+    ],
+    "limiting_component": "Thermal CHT / Valve Guides",
+    "degradation_trend": "STABLE_NOMINAL"
+  }
+}

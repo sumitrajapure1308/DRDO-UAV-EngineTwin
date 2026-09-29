@@ -1,0 +1,35 @@
+{
+  "engine_type": "4-Cylinder 4-Stroke Turbocharged Aero Piston Engine (MALE UAV Propulsion)",
+  "reference_class": "Rotax 914/915 iS MALE UAV Class",
+  "cylinders": 4,
+  "bore_mm": 84.0,
+  "stroke_mm": 61.0,
+  "displacement_cc": 1352.0,
+  "compression_ratio": 9.0,
+  "rated_power_hp": 141.0,
+  "rated_rpm": 5800.0,
+  "max_continuous_rpm": 5500.0,
+  "cruise_rpm": 5000.0,
+  "idle_rpm": 1400.0,
+  "firing_order": [1, 4, 3, 2],
+  "cooling_system": "Liquid-cooled cylinder heads with ram-air cooled cylinder barrels",
+  "lubrication_system": "Dry sump forced lubrication with integrated trochoid oil pump and oil cooler",
+  "turbocharging": {
+    "type": "Exhaust gas turbocharger with ECU-controlled electronic wastegate",
+    "intercooler": "Air-to-air charge air cooler",
+    "max_boost_pressure_bar": 1.45,
+    "max_continuous_boost_bar": 1.35
+  },
+  "fuel_system": {
+    "type": "Sequential Multi-Port Electronic Fuel Injection (EFI)",
+    "fuel_type": "AVGAS 100LL or EN228 Super Unleaded",
+    "fuel_density_kg_per_l": 0.72,
+    "nominal_fuel_pressure_bar": 3.0,
+    "lower_heating_value_mj_kg": 43.5
+  },
+  "electrical_system": {
+    "nominal_bus_voltage_v": 28.0,
+    "alternator_capacity_w": 1200.0,
+    "battery_capacity_ah": 18.0
+  }
+}

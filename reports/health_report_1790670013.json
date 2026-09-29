@@ -1,0 +1,64 @@
+{
+  "report_id": "DRDO-EHR-1790670013",
+  "generated_at": "2026-09-29 08:20:13 UTC",
+  "organization": "DRDO Department of Defence R&D - Theme: Robotics & Drones",
+  "problem_statement_id": "SIH26054",
+  "mission_name": "HIGH_ALTITUDE_RECON",
+  "mission_duration_minutes": 0.9,
+  "mission_phases_covered": [
+    "Takeoff & Full Power Climb",
+    "Pre-flight & Ground Warmup"
+  ],
+  "initial_engine_health_index": 99.6,
+  "minimum_engine_health_index": 97.5,
+  "final_engine_health_index": 98.9,
+  "health_degradation_pct": 0.73,
+  "mission_reliability_score": 93.5,
+  "final_subsystem_health": {
+    "thermal_cht": 100.0,
+    "exhaust_gas_path": 100.0,
+    "fuel_injection": 100.0,
+    "lubrication_system": 100.0,
+    "turbo_charge": 100.0,
+    "cooling_system": 100.0,
+    "combustion_stability": 90.3,
+    "electrical_bus": 100.0
+  },
+  "max_cht_c": 108.5,
+  "max_egt_c": 808.2,
+  "max_cht_spread_c": 3.8,
+  "max_egt_spread_c": 36.0,
+  "min_oil_pressure_bar": 1.94,
+  "max_oil_temp_c": 86.0,
+  "max_vibration_rms_g": 2.11,
+  "detected_fault_count": 1,
+  "detected_faults": [
+    {
+      "alert_id": "ALT-OHT-5",
+      "timestamp_s": 1790670007.8343914,
+      "fault_code": "ATA75-OHT-02",
+      "subsystem": "thermal_cht",
+      "severity": "CAUTION",
+      "title": "Predictive Overheating Trajectory",
+      "description": "Predictive thermal trend: CHT rising at +43.7\u00b0C/min. Projected to reach 236.8\u00b0C in 180s under current power.",
+      "affected_cylinder": null,
+      "root_cause_evidence": {
+        "thermal_slope_c_per_min": 43.7,
+        "projected_cht_180s": 236.8,
+        "current_cht_c": 105.7
+      },
+      "recommended_action": "Lower climb rate or increase airspeed by 10 kts to boost ram air mass flow; enrich mixture to cool combustion chambers.",
+      "is_active": true
+    }
+  ],
+  "prognostics": {
+    "accumulated_flight_hours": 340.0,
+    "remaining_useful_life_p50_hours": 1767.7,
+    "rul_confidence_interval_90pct": [
+      1499.3,
+      2036.0
+    ],
+    "limiting_component": "Combustion Stability / Ignition",
+    "degradation_trend": "STABLE_NOMINAL"
+  }
+}

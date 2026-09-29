@@ -1,0 +1,60 @@
+{
+  "high_altitude_recon": {
+    "name": "High-Altitude ISR Surveillance",
+    "description": "Climb to 24,000 ft, extreme low ambient density, turbocharger at high pressure ratio, cold soak (-30°C)",
+    "phases": [
+      {"name": "Pre-flight & Ground Warmup", "duration_s": 30, "altitude_ft": 500, "ambient_temp_c": 15, "throttle_pct": 25, "airspeed_kts": 0},
+      {"name": "Takeoff & Full Power Climb", "duration_s": 60, "altitude_ft": 4000, "ambient_temp_c": 8, "throttle_pct": 100, "airspeed_kts": 85},
+      {"name": "En-Route Cruise Climb", "duration_s": 90, "altitude_ft": 16000, "ambient_temp_c": -15, "throttle_pct": 85, "airspeed_kts": 95},
+      {"name": "High Ceiling Patrol Orbit", "duration_s": 120, "altitude_ft": 24000, "ambient_temp_c": -30, "throttle_pct": 75, "airspeed_kts": 105},
+      {"name": "Descent & Approach", "duration_s": 60, "altitude_ft": 6000, "ambient_temp_c": 5, "throttle_pct": 40, "airspeed_kts": 90},
+      {"name": "Recovery & Engine Cooldown", "duration_s": 30, "altitude_ft": 500, "ambient_temp_c": 15, "throttle_pct": 20, "airspeed_kts": 45}
+    ]
+  },
+  "hot_desert_patrol": {
+    "name": "Hot-Weather Desert Operation",
+    "description": "Operating in +45°C ambient temperature, low air density at moderate altitude, severe thermal stress on cooling & lubrication",
+    "phases": [
+      {"name": "Desert Taxi & High Ambient Idle", "duration_s": 30, "altitude_ft": 1500, "ambient_temp_c": 46, "throttle_pct": 30, "airspeed_kts": 15},
+      {"name": "Maximum Power Desert Takeoff", "duration_s": 45, "altitude_ft": 3500, "ambient_temp_c": 43, "throttle_pct": 100, "airspeed_kts": 80},
+      {"name": "Low-Level Dust & Heat Transit", "duration_s": 60, "altitude_ft": 5000, "ambient_temp_c": 40, "throttle_pct": 80, "airspeed_kts": 90},
+      {"name": "Perimeter Loiter Under Peak Solar Heat", "duration_s": 120, "altitude_ft": 6500, "ambient_temp_c": 38, "throttle_pct": 70, "airspeed_kts": 95},
+      {"name": "Thermal Management Recovery", "duration_s": 45, "altitude_ft": 2000, "ambient_temp_c": 44, "throttle_pct": 35, "airspeed_kts": 70}
+    ]
+  },
+  "rapid_throttle_tactical": {
+    "name": "Rapid Throttle & Tactical Maneuvering",
+    "description": "Simulates evasive combat orbits, wave-offs, rapid power changes (15% to 100%), transient turbo lag and thermal shock",
+    "phases": [
+      {"name": "Initial Ingress Cruise", "duration_s": 30, "altitude_ft": 8000, "ambient_temp_c": 10, "throttle_pct": 65, "airspeed_kts": 100},
+      {"name": "Rapid Power Burst 1 (Combat Climb)", "duration_s": 25, "altitude_ft": 9500, "ambient_temp_c": 8, "throttle_pct": 100, "airspeed_kts": 115},
+      {"name": "Sudden Idle Throttle Chop (Evasive Dive)", "duration_s": 20, "altitude_ft": 7000, "ambient_temp_c": 12, "throttle_pct": 15, "airspeed_kts": 125},
+      {"name": "Rapid Power Slam to 100% (Wave-Off / Re-engage)", "duration_s": 35, "altitude_ft": 8500, "ambient_temp_c": 9, "throttle_pct": 100, "airspeed_kts": 110},
+      {"name": "Intermediate Combat Loiter", "duration_s": 40, "altitude_ft": 8500, "ambient_temp_c": 9, "throttle_pct": 70, "airspeed_kts": 100},
+      {"name": "Second Power Chop & Recovery", "duration_s": 30, "altitude_ft": 5000, "ambient_temp_c": 15, "throttle_pct": 35, "airspeed_kts": 85}
+    ]
+  },
+  "maritime_endurance": {
+    "name": "Maritime Long Endurance Patrol",
+    "description": "Low-to-medium altitude extended maritime patrol, high moisture content, extended thermal equilibrium",
+    "phases": [
+      {"name": "Coastal Departure", "duration_s": 40, "altitude_ft": 2000, "ambient_temp_c": 22, "throttle_pct": 80, "airspeed_kts": 90},
+      {"name": "Long Range Oceanic Transit", "duration_s": 70, "altitude_ft": 4500, "ambient_temp_c": 18, "throttle_pct": 65, "airspeed_kts": 95},
+      {"name": "Steady Endurance Surveillance Orbit", "duration_s": 150, "altitude_ft": 3500, "ambient_temp_c": 20, "throttle_pct": 58, "airspeed_kts": 88},
+      {"name": "Low-Altitude Maritime Inspection", "duration_s": 50, "altitude_ft": 1200, "ambient_temp_c": 24, "throttle_pct": 62, "airspeed_kts": 85},
+      {"name": "RTB & Cooldown", "duration_s": 40, "altitude_ft": 500, "ambient_temp_c": 22, "throttle_pct": 30, "airspeed_kts": 60}
+    ]
+  },
+  "fault_evaluation_flight": {
+    "name": "Diagnostic & Fault Evaluation Flight",
+    "description": "Baseline nominal cruise transitioning into controlled progressive fault injections (Injector clog, cooling degradation, oil pressure drop, misfire) to validate AI/ML detection and RUL prognostics",
+    "phases": [
+      {"name": "Nominal Takeoff & Climb", "duration_s": 40, "altitude_ft": 5000, "ambient_temp_c": 15, "throttle_pct": 85, "airspeed_kts": 90},
+      {"name": "Baseline Level Flight (Clean)", "duration_s": 50, "altitude_ft": 7500, "ambient_temp_c": 10, "throttle_pct": 70, "airspeed_kts": 95},
+      {"name": "Stage 1: Incipient Injector & CHT Drift", "duration_s": 60, "altitude_ft": 7500, "ambient_temp_c": 10, "throttle_pct": 70, "airspeed_kts": 95, "inject_fault": "injector_abnormal", "fault_severity": 0.45},
+      {"name": "Stage 2: Coolant Pump Flow Restriction", "duration_s": 60, "altitude_ft": 8000, "ambient_temp_c": 12, "throttle_pct": 72, "airspeed_kts": 95, "inject_fault": "cooling_degradation", "fault_severity": 0.65},
+      {"name": "Stage 3: Lubrication Pressure Drop & Bearing Friction", "duration_s": 60, "altitude_ft": 8000, "ambient_temp_c": 12, "throttle_pct": 68, "airspeed_kts": 90, "inject_fault": "lubrication_issue", "fault_severity": 0.75},
+      {"name": "Emergency Descent & Safe Landing", "duration_s": 40, "altitude_ft": 1000, "ambient_temp_c": 18, "throttle_pct": 30, "airspeed_kts": 65}
+    ]
+  }
+}

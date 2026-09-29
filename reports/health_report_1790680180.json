@@ -1,0 +1,46 @@
+{
+  "report_id": "DRDO-EHR-1790680180",
+  "generated_at": "2026-09-29 11:09:40 UTC",
+  "organization": "DRDO Department of Defence R&D - Theme: Robotics & Drones",
+  "problem_statement_id": "SIH26054",
+  "mission_name": "FAULT_EVALUATION_FLIGHT_SAMPLE",
+  "mission_duration_minutes": 0.0,
+  "mission_phases_covered": [
+    "Baseline Level Flight (Clean)",
+    "Nominal Takeoff & Climb"
+  ],
+  "initial_engine_health_index": 100.0,
+  "minimum_engine_health_index": 99.9,
+  "final_engine_health_index": 100.0,
+  "health_degradation_pct": -0.01,
+  "mission_reliability_score": 99.9,
+  "final_subsystem_health": {
+    "thermal_cht": 100.0,
+    "exhaust_gas_path": 100.0,
+    "fuel_injection": 100.0,
+    "lubrication_system": 100.0,
+    "turbo_charge": 100.0,
+    "cooling_system": 100.0,
+    "combustion_stability": 100.0,
+    "electrical_bus": 100.0
+  },
+  "max_cht_c": 105.3,
+  "max_egt_c": 788.0,
+  "max_cht_spread_c": 3.4,
+  "max_egt_spread_c": 38.6,
+  "min_oil_pressure_bar": 2.97,
+  "max_oil_temp_c": 86.3,
+  "max_vibration_rms_g": 1.67,
+  "detected_fault_count": 0,
+  "detected_faults": [],
+  "prognostics": {
+    "accumulated_flight_hours": 340.0,
+    "remaining_useful_life_p50_hours": 1800.0,
+    "rul_confidence_interval_90pct": [
+      1528.9,
+      2071.1
+    ],
+    "limiting_component": "Thermal CHT / Valve Guides",
+    "degradation_trend": "STABLE_NOMINAL"
+  }
+}

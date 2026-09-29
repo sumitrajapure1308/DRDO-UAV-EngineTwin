@@ -1,0 +1,70 @@
+{
+  "rpm": {
+    "idle_min": 1300.0,
+    "idle_max": 1600.0,
+    "max_continuous": 5500.0,
+    "redline": 5800.0,
+    "overspeed_critical": 6000.0
+  },
+  "map_inhg": {
+    "idle_min": 12.0,
+    "cruise_normal_min": 26.0,
+    "cruise_normal_max": 32.0,
+    "takeoff_max": 40.0,
+    "overboost_warning": 42.0
+  },
+  "cht_c": {
+    "nominal_min": 85.0,
+    "nominal_max": 115.0,
+    "caution_high": 125.0,
+    "warning_high": 135.0,
+    "critical_redline": 145.0,
+    "max_cylinder_spread_c": 18.0
+  },
+  "egt_c": {
+    "nominal_min": 680.0,
+    "nominal_max": 820.0,
+    "caution_high": 840.0,
+    "warning_high": 860.0,
+    "critical_redline": 880.0,
+    "max_cylinder_spread_c": 50.0
+  },
+  "oil_pressure_bar": {
+    "critical_low": 0.8,
+    "warning_low": 1.5,
+    "caution_low": 2.0,
+    "nominal_min": 2.5,
+    "nominal_max": 5.0,
+    "caution_high": 6.0,
+    "warning_high": 7.0
+  },
+  "oil_temp_c": {
+    "critical_cold": 40.0,
+    "caution_cold": 50.0,
+    "nominal_min": 75.0,
+    "nominal_max": 110.0,
+    "caution_high": 118.0,
+    "warning_high": 125.0,
+    "critical_redline": 130.0
+  },
+  "fuel_pressure_bar": {
+    "warning_low": 2.5,
+    "nominal_min": 2.8,
+    "nominal_max": 3.2,
+    "warning_high": 3.6
+  },
+  "bus_voltage_v": {
+    "critical_low": 22.0,
+    "warning_low": 24.5,
+    "nominal_min": 27.5,
+    "nominal_max": 28.5,
+    "warning_high": 30.0,
+    "critical_high": 32.0
+  },
+  "vibration_rms_g": {
+    "nominal_max": 1.8,
+    "caution_high": 2.5,
+    "warning_high": 3.5,
+    "critical_high": 5.0
+  }
+}

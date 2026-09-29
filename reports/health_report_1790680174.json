@@ -1,0 +1,65 @@
+{
+  "report_id": "DRDO-EHR-1790680174",
+  "generated_at": "2026-09-29 11:09:34 UTC",
+  "organization": "DRDO Department of Defence R&D - Theme: Robotics & Drones",
+  "problem_statement_id": "SIH26054",
+  "mission_name": "RAPID_THROTTLE_TACTICAL_SAMPLE",
+  "mission_duration_minutes": 0.0,
+  "mission_phases_covered": [
+    "Rapid Power Burst 1 (Combat Climb)",
+    "Sudden Idle Throttle Chop (Evasive Dive)",
+    "Initial Ingress Cruise"
+  ],
+  "initial_engine_health_index": 99.9,
+  "minimum_engine_health_index": 98.3,
+  "final_engine_health_index": 98.3,
+  "health_degradation_pct": 1.59,
+  "mission_reliability_score": 92.0,
+  "final_subsystem_health": {
+    "thermal_cht": 100.0,
+    "exhaust_gas_path": 100.0,
+    "fuel_injection": 100.0,
+    "lubrication_system": 89.2,
+    "turbo_charge": 100.0,
+    "cooling_system": 100.0,
+    "combustion_stability": 100.0,
+    "electrical_bus": 100.0
+  },
+  "max_cht_c": 95.8,
+  "max_egt_c": 808.1,
+  "max_cht_spread_c": 3.6,
+  "max_egt_spread_c": 39.7,
+  "min_oil_pressure_bar": 2.1,
+  "max_oil_temp_c": 85.0,
+  "max_vibration_rms_g": 2.1,
+  "detected_fault_count": 1,
+  "detected_faults": [
+    {
+      "alert_id": "ALT-LUBE-1",
+      "timestamp_s": 1790590348.0576327,
+      "fault_code": "ATA79-LUBE-01",
+      "subsystem": "lubrication_system",
+      "severity": "WARNING",
+      "title": "Lubrication Oil Pressure Degradation",
+      "description": "Oil pressure deficit: 2.59 bar (Digital Twin expected: 3.87 bar). Oil temp: 85.0\u00b0C.",
+      "affected_cylinder": null,
+      "root_cause_evidence": {
+        "oil_pressure_bar": 2.59,
+        "residual_oil_p_bar": -1.28,
+        "oil_temp_c": 85.0
+      },
+      "recommended_action": "AOG Alert: Immediate engine power reduction if airborne. Inspect oil filter for metal particulate, check pressure relief valve and oil lines.",
+      "is_active": true
+    }
+  ],
+  "prognostics": {
+    "accumulated_flight_hours": 340.0,
+    "remaining_useful_life_p50_hours": 1750.4,
+    "rul_confidence_interval_90pct": [
+      1483.3,
+      2017.5
+    ],
+    "limiting_component": "Crankshaft Journal Lubrication",
+    "degradation_trend": "STABLE_NOMINAL"
+  }
+}

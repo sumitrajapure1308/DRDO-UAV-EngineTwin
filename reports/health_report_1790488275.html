@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DRDO Aero Engine Mission Health Report - DRDO-EHR-1790488275</title>
+<style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0c1017; color: #c9d1d9; margin: 0; padding: 25px; line-height: 1.5; }
+    .report-card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 25px; max-width: 1000px; margin: 0 auto; box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
+    .header { border-bottom: 2px solid #238636; padding-bottom: 15px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
+    h1 { color: #58a6ff; margin: 0; font-size: 24px; }
+    .meta-tag { color: #8b949e; font-size: 13px; }
+    .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 25px; }
+    .kpi-box { background: #0d1117; border: 1px solid #21262d; border-radius: 6px; padding: 15px; text-align: center; }
+    .kpi-val { font-size: 24px; font-weight: bold; color: #3fb950; margin: 5px 0; }
+    .kpi-val.warning { color: #d29922; }
+    .kpi-val.danger { color: #f85149; }
+    .kpi-lbl { font-size: 11px; text-transform: uppercase; color: #8b949e; letter-spacing: 0.5px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 13px; }
+    th, td { border: 1px solid #30363d; padding: 10px; text-align: left; }
+    th { background: #21262d; color: #c9d1d9; }
+    .badge { display: inline-block; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-weight: bold; }
+    .badge.danger { background: #f8514933; color: #f85149; border: 1px solid #f85149; }
+    .badge.warning { background: #d2992233; color: #d29922; border: 1px solid #d29922; }
+    .section-title { color: #79c0ff; font-size: 16px; margin-top: 25px; border-bottom: 1px solid #21262d; padding-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="report-card">
+    <div class="header">
+        <div>
+            <h1>DEFENCE RESEARCH &amp; DEVELOPMENT ORGANISATION</h1>
+            <div class="meta-tag">MALE UAV Aero Piston Engine Digital Twin Health &amp; Reliability Debrief</div>
+            <div class="meta-tag">Report ID: <strong>DRDO-EHR-1790488275</strong> | Generated: 2026-09-27 05:51:15 UTC</div>
+        </div>
+        <div style="text-align: right;">
+            <div style="font-size: 18px; font-weight: bold; color: #3fb950;">DRDO SIH26054</div>
+            <div class="meta-tag">Mission: E2E_VALIDATION_MISSION</div>
+            <div class="meta-tag">Duration: 0.0 min</div>
+        </div>
+    </div>
+
+    <div class="kpi-grid">
+        <div class="kpi-box">
+            <div class="kpi-lbl">Final Engine Health</div>
+            <div class="kpi-val ">90.6%</div>
+            <div class="meta-tag">Reliability: 58.5%</div>
+        </div>
+        <div class="kpi-box">
+            <div class="kpi-lbl">Remaining Useful Life (P50)</div>
+            <div class="kpi-val">1153.4 hrs</div>
+            <div class="meta-tag">TBO Confidence: 90%</div>
+        </div>
+        <div class="kpi-box">
+            <div class="kpi-lbl">Peak Cylinder Head Temp</div>
+            <div class="kpi-val ">89.6 °C</div>
+            <div class="meta-tag">Max Spread: 4.3 °C</div>
+        </div>
+        <div class="kpi-box">
+            <div class="kpi-lbl">Active Faults Logged</div>
+            <div class="kpi-val danger">1</div>
+            <div class="meta-tag">Limiting: Crankshaft Journal Lubrication</div>
+        </div>
+    </div>
+
+    <div class="section-title">ENGINE SUB-SYSTEM HEALTH EVALUATION</div>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 10px;">
+        <div class="kpi-box"><div class="kpi-lbl">Thermal CHT</div><div class="kpi-val" style="font-size:18px;">100.0%</div></div>
+        <div class="kpi-box"><div class="kpi-lbl">Exhaust Gas Path</div><div class="kpi-val" style="font-size:18px;">100.0%</div></div>
+        <div class="kpi-box"><div class="kpi-lbl">Fuel Injection</div><div class="kpi-val" style="font-size:18px;">100.0%</div></div>
+        <div class="kpi-box"><div class="kpi-lbl">Lubrication System</div><div class="kpi-val" style="font-size:18px;">46.0%</div></div>
+        <div class="kpi-box"><div class="kpi-lbl">Turbocharger Boost</div><div class="kpi-val" style="font-size:18px;">100.0%</div></div>
+        <div class="kpi-box"><div class="kpi-lbl">Cooling Loop</div><div class="kpi-val" style="font-size:18px;">100.0%</div></div>
+        <div class="kpi-box"><div class="kpi-lbl">Combustion Stability</div><div class="kpi-val" style="font-size:18px;">100.0%</div></div>
+        <div class="kpi-box"><div class="kpi-lbl">Electrical Bus</div><div class="kpi-val" style="font-size:18px;">100.0%</div></div>
+    </div>
+
+    <div class="section-title">INTELLIGENT FAULT &amp; PREDICTIVE INCIDENT LOG</div>
+    <table>
+        <thead>
+            <tr>
+                <th>ATA Code</th>
+                <th>Severity</th>
+                <th>Diagnostic Title</th>
+                <th>Physical Evidence &amp; Symptoms</th>
+                <th>Prescribed Maintenance Procedure</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td><code>ATA79-LUBE-01</code></td>
+                <td><span class="badge danger">CRITICAL</span></td>
+                <td><strong>Lubrication Oil Pressure Degradation</strong></td>
+                <td>Oil pressure deficit: 0.86 bar (Digital Twin expected: 1.97 bar). Oil temp: 84.5°C.</td>
+                <td><em>AOG Alert: Immediate engine power reduction if airborne. Inspect oil filter for metal particulate, check pressure relief valve and oil lines.</em></td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+    <div class="section-title">PRESCRIPTIVE PROGNOSTIC MAINTENANCE DIRECTIVE</div>
+    <div style="background: #0d1117; border-left: 4px solid #58a6ff; padding: 15px; margin-top: 10px; border-radius: 4px;">
+        <p><strong>Primary Limiting Subsystem:</strong> Crankshaft Journal Lubrication</p>
+        <p><strong>Degradation Trend:</strong> <code>ACCELERATING_WEAR</code></p>
+        <p><strong>Confidence Interval (90%):</strong> P10 = 990.7 hrs, P50 = 1153.4 hrs, P90 = 1316.1 hrs.</p>
+        <p><strong>Ground Crew Action:</strong> Review prescribed maintenance procedures in the incident log above prior to next scheduled sortie.</p>
+    </div>
+</div>
+</body>
+</html>

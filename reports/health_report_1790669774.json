@@ -1,0 +1,45 @@
+{
+  "report_id": "DRDO-EHR-1790669774",
+  "generated_at": "2026-09-29 08:16:14 UTC",
+  "organization": "DRDO Department of Defence R&D - Theme: Robotics & Drones",
+  "problem_statement_id": "SIH26054",
+  "mission_name": "HOT_DESERT_PATROL",
+  "mission_duration_minutes": 0.0,
+  "mission_phases_covered": [
+    "Desert Taxi & High Ambient Idle"
+  ],
+  "initial_engine_health_index": 99.9,
+  "minimum_engine_health_index": 99.6,
+  "final_engine_health_index": 99.6,
+  "health_degradation_pct": 0.32,
+  "mission_reliability_score": 95.5,
+  "final_subsystem_health": {
+    "thermal_cht": 100.0,
+    "exhaust_gas_path": 100.0,
+    "fuel_injection": 100.0,
+    "lubrication_system": 92.3,
+    "turbo_charge": 100.0,
+    "cooling_system": 100.0,
+    "combustion_stability": 100.0,
+    "electrical_bus": 100.0
+  },
+  "max_cht_c": 88.2,
+  "max_egt_c": 751.4,
+  "max_cht_spread_c": 3.6,
+  "max_egt_spread_c": 18.7,
+  "min_oil_pressure_bar": 2.41,
+  "max_oil_temp_c": 85.2,
+  "max_vibration_rms_g": 0.72,
+  "detected_fault_count": 0,
+  "detected_faults": [],
+  "prognostics": {
+    "accumulated_flight_hours": 340.0,
+    "remaining_useful_life_p50_hours": 1788.4,
+    "rul_confidence_interval_90pct": [
+      1518.1,
+      2058.6
+    ],
+    "limiting_component": "Crankshaft Journal Lubrication",
+    "degradation_trend": "STABLE_NOMINAL"
+  }
+}

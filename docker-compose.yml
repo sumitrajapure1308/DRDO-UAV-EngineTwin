@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  digital-twin-gcs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: drdo_digital_twin_gcs
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+      - "5555:5555/udp"
+    volumes:
+      - ./recordings:/app/recordings
+      - ./reports:/app/reports
+    environment:
+      - ENVIRONMENT=production
+      - LOG_LEVEL=INFO
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/status"]
+      interval: 15s
+      timeout: 5s
+      retries: 3

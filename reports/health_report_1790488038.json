@@ -1,0 +1,64 @@
+{
+  "report_id": "DRDO-EHR-1790488038",
+  "generated_at": "2026-09-27 05:47:18 UTC",
+  "organization": "DRDO Department of Defence R&D - Theme: Robotics & Drones",
+  "problem_statement_id": "SIH26054",
+  "mission_name": "HIGH_ALTITUDE_RECON",
+  "mission_duration_minutes": 0.0,
+  "mission_phases_covered": [
+    "Pre-flight & Ground Warmup"
+  ],
+  "initial_engine_health_index": 99.6,
+  "minimum_engine_health_index": 95.9,
+  "final_engine_health_index": 95.9,
+  "health_degradation_pct": 3.77,
+  "mission_reliability_score": 5.0,
+  "final_subsystem_health": {
+    "thermal_cht": 100.0,
+    "exhaust_gas_path": 0.0,
+    "fuel_injection": 100.0,
+    "lubrication_system": 87.3,
+    "turbo_charge": 100.0,
+    "cooling_system": 100.0,
+    "combustion_stability": 100.0,
+    "electrical_bus": 100.0
+  },
+  "max_cht_c": 88.6,
+  "max_egt_c": 733.3,
+  "max_cht_spread_c": 3.3,
+  "max_egt_spread_c": 129.8,
+  "min_oil_pressure_bar": 2.02,
+  "max_oil_temp_c": 84.9,
+  "max_vibration_rms_g": 0.65,
+  "detected_fault_count": 1,
+  "detected_faults": [
+    {
+      "alert_id": "ALT-INJ-1",
+      "timestamp_s": 1790488038.3098705,
+      "fault_code": "ATA73-INJ-02",
+      "subsystem": "fuel_injection",
+      "severity": "WARNING",
+      "title": "Injector #2 Lean/Delivery Abnormality",
+      "description": "Fuel delivery deviation on Cylinder #2. Local CHT is +0.4\u00b0C above digital twin baseline. Cylinder spread 3.3\u00b0C.",
+      "affected_cylinder": 2,
+      "root_cause_evidence": {
+        "abnormal_cylinder": 2,
+        "cht_residual_c": 0.44,
+        "cht_spread_c": 3.3,
+        "fuel_flow_residual": 0.01
+      },
+      "recommended_action": "Borescope check; perform bench ultrasonic cleaning and spray pattern flow calibration on affected injector.",
+      "is_active": true
+    }
+  ],
+  "prognostics": {
+    "accumulated_flight_hours": 340.0,
+    "remaining_useful_life_p50_hours": 1684.9,
+    "rul_confidence_interval_90pct": [
+      1422.7,
+      1947.1
+    ],
+    "limiting_component": "Exhaust Gas Path / Valves",
+    "degradation_trend": "STABLE_NOMINAL"
+  }
+}
